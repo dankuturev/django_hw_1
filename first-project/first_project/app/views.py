@@ -31,10 +31,7 @@ def time_view(request):
 
 
 def workdir_view(request):
-    dir_list = []
-    workdir = listdir(path='.')
-    for item in workdir:
-        dir_list.append(f'{item},\n')
+    dir_list = [f'{item},\n' for item in listdir(path='.')]
     # по аналогии с `time_view`, напишите код,
     # который возвращает список файлов в рабочей
     # директории
